@@ -1,0 +1,1 @@
+web: java -jar build/libs/mho-ms-0.0.1-SNAPSHOT.jar --server.port=$PORT

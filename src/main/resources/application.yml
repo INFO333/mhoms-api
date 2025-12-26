@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: mhoms-api
+
+  # Database Configuration - Uses environment variable in production
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/mhoms_db}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:PRitham45*#$}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:myVeryLongSecretKeyForJWTTokenGenerationThatIsAtLeast256BitsLong2024}
+  access-token-expiration: 86400000
+  refresh-token-expiration: 604800000
+
+# Server Configuration
+server:
+  port: ${PORT:8080}
+
+# Swagger UI
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

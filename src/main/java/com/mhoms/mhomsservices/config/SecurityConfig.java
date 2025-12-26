@@ -54,6 +54,7 @@ public class SecurityConfig {
                         // PUBLIC ENDPOINTS - No authentication required
                         // ═══════════════════════════════════════════════════════
                         .requestMatchers(
+                                "/health",
                                 "/auth/**",           // Authentication endpoints
                                 "/v3/api-docs/**",    // Swagger API docs
                                 "/swagger-ui/**",     // Swagger UI

@@ -79,11 +79,11 @@ public class SwaggerConfig {
                                 .url("https://opensource.org/licenses/MIT")))
                 .servers(List.of(
                         new Server()
-                                .url("http://localhost:8080")
-                                .description("Development Server"),
+                                .url("https://mhoms-api.onrender.com")
+                                .description("Production Server"),
                         new Server()
-                                .url("https://mhoms-production.com")
-                                .description("Production Server (Coming Soon)")
+                                .url("http://localhost:8080")
+                                .description("Local Development Server")
                 ))
                 // Add JWT security scheme
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))

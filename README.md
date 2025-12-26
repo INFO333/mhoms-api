@@ -343,7 +343,7 @@ docker run -p 8080:8080 \
 ### Paginated Response
 ```json
 {
-  "content": [...],
+  "content": [],
   "pageNumber": 0,
   "pageSize": 10,
   "totalElements": 100,
